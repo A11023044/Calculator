@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="jquery-3.6.0.js"></script>
+    <title>計算機</title>
+    <meta charset="UTF-8">
+    <style>
+        input {
+            width: 100px;
+            height: 100px;
+        }
+
+        .show {
+            width: 300px;
+            height: 95px;
+        }
+
+        table {
+            margin: 50px auto;
+        }
+    </style>
+    <script>
+        function add(num) {
+            ans.value += num.value
+        }
+        function A() {
+            ans.value = ""
+        }
+        function eq() {
+            var a = ans.value;
+            ans.value = eval(a);
+        }
+    </script>
+</head>
+
+<body>
+    <table style="border:3px #cccccc solid;">
+        <tr>
+            <td colspan="3"><input type="text" class="show" id="ans"></td>
+            <td><input type="button" id="cancal" value="C" onclick="A()"></td>
+        </tr>
+        <tr>
+            <td><input type="button" id="seven" value="7" onclick="add(this)"></td>
+            <td><input type="button" id="eight" value="8" onclick="add(this)"></td>
+            <td><input type="button" id="nine" value="9" onclick="add(this)"></td>
+            <td><input type="button" id="divided " value="/" onclick="add(this)"></td>
+        </tr>
+        <tr>
+            <td><input type="button" id="four" value="4" onclick="add(this)"></td>
+            <td><input type="button" id="five" value="5" onclick="add(this)"></td>
+            <td><input type="button" id="six" value="6" onclick="add(this)"></td>
+            <td><input type="button" id="multiplied" value="*" onclick="add(this)"></td>
+        </tr>
+        <tr>
+            <td><input type="button" id="one" value="1" onclick="add(this)"></td>
+            <td><input type="button" id="two" value="2" onclick="add(this)"></td>
+            <td><input type="button" id="three" value="3" onclick="add(this)"></td>
+            <td><input type="button" id="plus" value="+" onclick="add(this)"></td>
+        </tr>
+        <tr>
+            <td><input type="button" id="zero" value="0" onclick="add(this)"></td>
+            <td><input type="button" id="poit" value="." onclick="add(this)"></td>
+            <td><input type="button" id="eq" value="=" onclick="eq()"></td>
+            <td><input type="button" id="minus" value="-" onclick="add(this)"></td>
+        </tr>
+    </table>
+</body>
+
+</html>
